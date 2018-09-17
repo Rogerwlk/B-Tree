@@ -1,0 +1,43 @@
+Name: Roger Wang
+
+Ethics Statement: Other than anything noted in the disclosures
+below, the code submitted is of my design and my design alone. 
+I received no help nor used any references, resources, and had no
+discussion with other classmates. I understand the Univeristy 
+Policy concerning ethics and understand that violating this 
+policy will result in drastic repercussions. 
+
+Disclosures: Please note any discussions, use of supplemental
+resources, use of pre-existing code including programming language
+libraries. If you have nothing to disclose, please type "no 
+disclosures".
+
+I use the lecture slides.
+
+Summary of your design and implementation: Describe the design of
+your structure. Discuss your choice of m (the order of the B-tree) 
+both practically and theoretically. 
+
+See comments in the code. When m=8, the spellchecking is the fastest.
+I test m=4~10,20,30,50. When m<8, the increase in m reduces 
+spellchecking time. When m>8, the increase in m increases 
+spellchecking time. Theoretically, retriving memory is slower than 
+computation, so a small increase in m reduces the number of memory 
+retriving significantly and increases the number of computation a little. 
+The saved retriving time is more than the wasted computation time. 
+However, when m becomes larger, the computation time increases 
+significantly and the b-tree has less levels and looks more like 
+a linked list.
+ 
+
+Notes to the grader (describe the state of your program. Is it
+fully functional? Do some operations work while others do not?):
+
+Fully functional.
+
+Compliation instructions (Be Precise -- does the submission 
+compile on the server?): 
+
+g++ BTree.h BTree.cpp LinkedList.h LinkedList.cpp rw794P2.cpp
+
+./a.out inputFile1.txt dictionaryFile.txt removalFile.txt
